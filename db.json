@@ -1,0 +1,50 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "name": "Bhagwat Geeta",
+      "pages": 10000,
+      "email": "shivamsharmaindore2000@gmail.com",
+      "author": "Shri Krishna",
+      "mobile": "45642564",
+      "genre": "HolyBook",
+      "wishlist": true
+    },
+    {
+      "id": 2,
+      "name": "asfdSFSD",
+      "pages": 1232,
+      "email": "shivamsharmaindore2000@gmail.com",
+      "author": "AFAFASAD",
+      "mobile": "344314",
+      "genre": "DFGSDGA",
+      "wishlist": true
+    }
+  ],
+  "signupUsers": [
+    {
+      "fullname": "Ankit Gautam",
+      "email": "ankit@gmail.com",
+      "password": "123456789",
+      "mobile": 525345626,
+      "id": 1
+    },
+    {
+      "fullname": "rahul",
+      "email": "rahul@gmail.com",
+      "password": "123456789",
+      "mobile": 8568658,
+      "id": 2
+    },
+    {
+      "fullname": "gdzd",
+      "email": "ankit@gmail.com",
+      "password": "12345",
+      "mobile": 542345,
+      "id": 3
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

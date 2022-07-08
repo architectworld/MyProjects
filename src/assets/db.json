@@ -1,0 +1,60 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "name": "three man",
+      "pages": 1234,
+      "email": "david@gmail.com",
+      "author": "david",
+      "mobile": "123456",
+      "salary": "23578",
+      "wishlist": false
+    },
+    {
+      "id": 2,
+      "name": "the wing",
+      "pages": 500,
+      "email": "robert@gmail.com",
+      "author": "robert",
+      "mobile": "9876543",
+      "salary": "2000000",
+      "wishlist": true
+    },
+    {
+      "id": 3,
+      "name": "maths",
+      "pages": 57090,
+      "email": "rdsharma@gmail.com",
+      "author": "rd sharma",
+      "mobile": "098765",
+      "salary": "900000",
+      "wishlist": true
+    }
+  ],
+  "signupUsers": [
+    {
+      "fullname": "aman",
+      "email": "aman@gmail.com",
+      "password": "aman",
+      "mobile": 1234567890,
+      "id": 0
+    },
+    {
+      "fullname": "aman",
+      "email": "aman@gmail.com",
+      "password": "aman",
+      "mobile": 1234567890,
+      "id": 1
+    },
+    {
+      "fullname": "Aman Singh Yadav",
+      "email": "aman123@gmail.com",
+      "password": "12345",
+      "mobile": 6385777777,
+      "id": 2
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

@@ -1,0 +1,106 @@
+<nav class="navbar navbar-light bg-success">
+  <div class="container-fluid">
+    <h3>Magic of Books</h3>
+    <div class="d-flex" *ngIf=!viewonly>
+      <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Add Books
+      </button>&nbsp;&nbsp;
+      <button class="btn btn-primary" type="button"   data-bs-toggle="modal" 
+      routerLink="/wishlist"  >WishList</button>
+      <button style="background-color: darkred; color: white;" routerLink="/login" (click)="loggout()" type="button" class="btn-btn-danger mx-2">
+        Log Out
+      </button>
+
+
+    </div>
+  </div>
+</nav>
+
+
+<table class="table mt-4">
+  <thead>
+    <tr>
+      <th scope="col">No.</th>
+      <th scope="col">Book Name</th>
+      <th scope="col">Pages</th>
+       <th scope="col">Author </th>
+       <th scope="col">Email </th>
+       <th scope="col">Phone</th>
+       <th scope="col">Genre</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let student of studentData">
+      <td>{{student.id}}</td>
+      <td>{{student.name}}</td>
+      <td>{{student.pages}}</td>
+      <td>{{student.author}}</td>
+      <td>{{student.email}}</td>
+      <td>{{student.mobile}}</td>
+      <td>{{student.genre}}</td>
+      <td *ngIf=!viewonly>
+        &nbsp;
+        <button (click)="onUpdate(student)" class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Edit</button>&nbsp;&nbsp;
+        <button type="button" (click)="addtowishlist(student)" class="btn btn-danger">{{!student.wishlist ? 'Add to wishList' : 'Remove from wishList'}}</button>&nbsp;&nbsp;
+        
+        <button (click)="deleteStudentDetails(student)"  type="button" class="btn btn-danger">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Book Details</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+
+        <form [formGroup]="formValue">
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Book Name</label>
+            <input type="text" class="form-control" formControlName="name">
+
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Pages</label>
+            <input type="number" class="form-control" formControlName="pages">
+          </div>
+
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Author</label>
+            <input type="text" class="form-control" formControlName="author">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Email</label>
+            <input type="email" class="form-control" formControlName="email">
+          </div>
+          
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Mobile</label>
+            <input type="text" class="form-control" formControlName="mobile">
+          </div>
+
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Genre</label>
+            <input type="text" class="form-control" formControlName="genre">
+          </div>
+
+        </form>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" id="cancel" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" (click)="postStudentDetails()" class="btn btn-primary">Add</button>
+
+        <button type="button" (click)="updateStudentDetails()" class="btn btn-warning">Update</button>
+        <!-- <button type="button" (click)="addtowishlist()" class="btn btn-danger">addwish</button> -->
+      </div>
+    </div>
+  </div>
+</div>
